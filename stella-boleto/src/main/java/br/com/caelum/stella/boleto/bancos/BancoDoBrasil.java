@@ -53,6 +53,13 @@ public class BancoDoBrasil extends AbstractBanco implements Banco {
 	private static final String NUMERO_BB = "001";
 	private static final String DIGITO_NUMERO_BB = "9";
 
+	public BancoDoBrasil(String codigoBarras) {
+		super(codigoBarras);
+	}
+
+	public BancoDoBrasil() {
+	}
+
 	@Override
 	public String geraCodigoDeBarrasPara(Boleto boleto) {
 		Beneficiario beneficiario = boleto.getBeneficiario();

@@ -66,4 +66,6 @@ public interface Banco extends Serializable {
 
 	String getNossoNumeroECodigoDocumento(Boleto boleto);
 
+	boolean isCodigoBarraGerado();
+
 }

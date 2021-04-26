@@ -16,6 +16,13 @@ public class Santander extends AbstractBanco {
     private final static String DIGITO_SANTANDER = "7";
     private GeradorDeDigitoSantander gdivSantander = new GeradorDeDigitoSantander();
 
+    public Santander(String codigoBarras) {
+        super(codigoBarras);
+    }
+
+    public Santander() {
+    }
+
     @Override
     public String geraCodigoDeBarrasPara(Boleto boleto) {
         Beneficiario beneficiario = boleto.getBeneficiario();

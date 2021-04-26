@@ -13,6 +13,16 @@ public abstract class AbstractBanco implements Banco {
 
 	protected final GeradorDeDigito geradorDeDigito = new GeradorDeDigitoPadrao();
 
+	protected final String codigoBarras;
+
+	protected AbstractBanco(String codigoBarras) {
+		this.codigoBarras = codigoBarras;
+	}
+
+	protected AbstractBanco(){
+		this(null);
+	}
+
 	@Override
 	public GeradorDeDigito getGeradorDeDigito() {
 		return geradorDeDigito;
@@ -35,6 +45,11 @@ public abstract class AbstractBanco implements Banco {
 		builder.append(getCodigoBeneficiarioFormatado(beneficiario));
 		builder.append(prefixNotNullStringOrDefault(beneficiario.getDigitoCodigoBeneficiario(), "", "-"));	
 		return builder.toString();
+	}
+
+	@Override
+	public boolean isCodigoBarraGerado() {
+		return this.codigoBarras != null;
 	}
 
 }

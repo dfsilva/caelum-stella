@@ -16,6 +16,13 @@ public class Itau extends AbstractBanco implements Banco {
 	private static final String NUMERO_ITAU = "341";
 	private static final String DIGITO_ITAU = "7";
 
+	public Itau(String codigoBarras) {
+		super(codigoBarras);
+	}
+
+	public Itau() {
+	}
+
 	@Override
 	public String geraCodigoDeBarrasPara(Boleto boleto) {
 		Beneficiario beneficiario = boleto.getBeneficiario();

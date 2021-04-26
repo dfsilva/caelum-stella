@@ -19,6 +19,14 @@ public class HSBC extends AbstractBanco implements Banco {
 	private static final String CODIGO_APLICATIVO = "2";
 	private static final String CARTEIRA_NAO_REGISTRADA = "CNR";
 
+
+	public HSBC(String codigoBarras) {
+		super(codigoBarras);
+	}
+
+	public HSBC() {
+	}
+
 	@Override
 	public String getNumeroFormatadoComDigito() {
 		return NUMERO_HSBC + "-" + DIGITO_HSBC;

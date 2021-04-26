@@ -15,6 +15,13 @@ public class Caixa extends AbstractBanco implements Banco {
 	private static final String NUMERO_CAIXA = "104";
 	private static final String DIGITO_CAIXA = "0";
 
+	public Caixa(String codigoBarras) {
+		super(codigoBarras);
+	}
+
+	public Caixa() {
+	}
+
 	@Override
 	public String geraCodigoDeBarrasPara(Boleto boleto) {
 
